@@ -1,0 +1,82 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require jquery.ui.all
+ *= require_tree .
+ */
+
+
+@import "bootstrap";
+@import "font-awesome";
+
+h1, h2, h3, ul, li, button {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  list-style: none;
+  font-size: inherit;
+  box-sizing: content-box;
+  font-family: sans-serif;
+  font-weight: normal;
+}
+
+button {
+  padding: 1px 1px 1px 1px;
+  border-radius: 3px;
+}
+
+li.list {
+  margin: 10px;
+  background: darkblue;
+  padding: 20px;
+  border-radius: 10px;
+  float: left;
+}
+h2 {
+  color: white;
+}
+li.card {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  position: relative;
+  background: lightblue;
+}
+
+li.card:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+li.card * {
+  display: block;
+  float: left;
+}
+
+li.card h3 {
+  line-height: 1;
+  font-size: 20px;
+  background: lightblue;
+}
+
+.destroy-card {
+  margin: 0px;
+  padding: 1px 0px 1px 0px;
+  width: 0px;
+  transition: width 1s, padding 1s, margin 1s;
+}
+
+li.card:hover > .destroy-card {
+  margin: 0px 20px 0px;
+  padding: 1px 5px 1px 5px;
+  width: 40px;
+}
